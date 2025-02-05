@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0)
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.content{
+    min-width: 800px;
+    min-height: 500px;
+}
+
+.card-container{
+    text-align: center;
+    background-color: #89b886;
+    width: 40%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.box {
+    width: 50%;
+    height: 20%;
+    background-color: #3a483c;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    top: 15px;  
+}
+
+.box .link-text{
+    color: white;
+    font-size: 500%;
+    margin: 0 auto;
+    position: relative;
+    top: 5%;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid #eeca2b;
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+}
+
+.link-image {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.link-image img {
+    height: 80%;
+    width: 70%;
+    position: relative;
+    left: 15%;
+    
+}
+
+
