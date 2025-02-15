@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export function InstagramFollowCard ({children,suggestion = 'Error loading suggestion'}) {
     const [isfollowing, setFollowing] = useState(false)
@@ -8,8 +8,7 @@ export function InstagramFollowCard ({children,suggestion = 'Error loading sugge
     const followButton = isfollowing? 'ins-followCard-Button is-following': 'ins-followCard-Button'
     
     const handleClick = ()=>{setFollowing(!isfollowing)}
-    
-
+   
     return (
         <article className='ins-followCard'>
             <header className="ins-followCardHeader">
