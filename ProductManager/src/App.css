@@ -1,89 +1,26 @@
 /*GENERAL CSS FOR PAGE*/
-header{
+#root{
   --main-band-color:#A4550A;
+  --main-background-color:#f9ca9f;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 html{
-  font-size: 62.5%;
-  font-family: "Bebas Neue", serif;
+font-size: 62.5%;
+font-family: "Bebas Neue", serif;
 }
 
 body{
-  background-color: grey;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
+background-color: var(--main-background-color);
+display: flex;
+flex-direction: column;
+padding: 0;
+margin: 0;
+min-height: 100vh;
 }
 
 /*****************/
 
-/*HEADER CSS*/
 
-.header{
-  display: flex;
-  flex-direction: row;
-  background-color: var(--main-band-color)
-}
-
-.header__nav{
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
-.header__options{
-  display: flex;
-  list-style: none;
-}
-
-.header__options li{
-  padding: 0 5rem;
-  font-size: 2.5rem;
-}
-
-.logo__image{
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-}
-
-.header__title{
-  padding-left: 2%;
-}
-
-/***************/
-
-/*MAIN CSS*/
-
-.main{
-  display: flex;
-  flex-direction: row;
-}
-
-.main__filter{
-  display: flex;
-  flex-direction:column;
-  flex-grow: 1;
-}
-
-.main__showcase{
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
-
-
-
-
-
-/*FOOTER CSS*/
-.footer{
-  display: flex;
-  justify-content: center;
-}
-
-
-
-
-/************/

@@ -1,0 +1,38 @@
+/*HEADER CSS*/
+
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-band-color)
+  }
+  
+  .header__nav{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  
+  .header__options{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  .header__options li{
+    padding: 0 5rem;
+    font-size: 3rem;
+    align-self: center;
+  }
+  
+  .logo__image{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+  
+  .header__title{
+    padding-left: 2%;
+    font-size: 4rem;
+  }
+  
+  /***************/

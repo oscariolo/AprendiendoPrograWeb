@@ -1,0 +1,33 @@
+/*MAIN CSS*/
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    background-color: #090909;
+    padding: 0.5rem;
+}
+  
+.main__filter{
+    display: flex;
+    flex-direction:column;
+    justify-self: center;
+    align-items: center;
+    padding: 2rem;
+    color:white
+}
+
+.main__showcase{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1rem
+}
+
+.tag-title__filter{
+    font-size: 3rem;
+}
+
+
+  
