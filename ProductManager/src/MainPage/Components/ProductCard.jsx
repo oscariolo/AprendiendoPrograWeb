@@ -1,8 +1,8 @@
 import '../Styles/ComponentStyles/ProductCardStyle.css'
 import {Product} from '../Models/Product'
 
-function ProductCard({imageRoute,product}) {
-    console.log(imageRoute)
+function ProductCard({imageRoute='/cafe.jpg',product=new Product(0,"name","desc",0,0)}) {
+
     return(
         <>
             <div className='card-container'>

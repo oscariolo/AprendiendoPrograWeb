@@ -7,7 +7,7 @@ export class Product{
         this.price=price
     }
 
-    toJSON(product){
+    toJSON(){
         return {
             id:this.id,
             name:this.name,
@@ -17,11 +17,8 @@ export class Product{
         }
     }
 
-    fromJSON(json){
-        this.id=json.id,
-        this.name=json.name,
-        this.description=json.description,
-        this.quantity=json.quantity,
-        this.price=json.price
+    static fromJSON(json){
+        let newProduct = new Product(json.id,json.name,json.description,json.quantity,json.price)
+        return newProduct
     }
 }
