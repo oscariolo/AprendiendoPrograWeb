@@ -7,7 +7,7 @@ import { Product } from './Models/Product'
 
 
 function MainContent() {
-  let test = new Product(1,'testname','asdasda',12,20)
+  let test = new Product(1,'testname','asdasda',12,10)
 
     return(
       <>

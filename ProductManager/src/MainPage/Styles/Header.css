@@ -23,6 +23,29 @@
     font-size: 3rem;
     align-self: center;
   }
+
+  .header__options li button{
+    transition: all .5s ease;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border: none;
+  }
+
+  .header__options li button:hover{
+    color: var(--main-band-color);
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .header__shopping-cart-icon{
+    font-size: 3rem;
+  }
   
   .logo__image{
     width: 10rem;
@@ -31,8 +54,9 @@
   }
   
   .header__title{
-    padding-left: 2%;
+    padding: 1%;
     font-size: 4rem;
+    align-self: center;
   }
   
   /***************/

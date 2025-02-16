@@ -10,15 +10,9 @@ function Header() {
           <h1 className='header__title'>Rabbit Garden Shop</h1>
           <nav className='header__nav'>
             <ul className='header__options'>
-              <li>
-                Home
-              </li>
-              <li>
-                Log in
-              </li>
-              <li>
-                <FaShoppingCart></FaShoppingCart>
-              </li>
+              <li><button className="header__home">Home</button></li>
+              <li><button className="header__login">Login</button></li>
+              <li><button className="header__shopping-cart"><FaShoppingCart className="header__shopping-cart-icon"></FaShoppingCart></button></li>
             </ul>
           </nav>
         </header>

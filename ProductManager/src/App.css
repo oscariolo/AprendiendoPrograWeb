@@ -7,6 +7,13 @@
   flex-direction: column;
 }
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0)
+}
+
 html{
 font-size: 62.5%;
 font-family: "Bebas Neue", serif;

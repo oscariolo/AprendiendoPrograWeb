@@ -8,7 +8,10 @@ function ProductCard({imageRoute,product}) {
             <div className='card-container'>
                 <img src={imageRoute} className='product-image'></img>
                 <h1 className='product-name'>{product.name}</h1>
-                <p className='price-tag'>prduct.price</p>  
+                <div className='product-buy'>
+                    <button className='product-buy__button'>Reservar</button>
+                    <p className='product-buy__price-tag'>{product.price + '$'}</p>  
+                </div>
             </div>
         </>
     )
