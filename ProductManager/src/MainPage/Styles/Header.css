@@ -3,7 +3,8 @@
 .header{
     display: flex;
     flex-direction: row;
-    background-color: var(--main-band-color)
+    background-color: var(--main-band-color);
+    flex-wrap: wrap;
   }
   
   .header__nav{
@@ -19,9 +20,10 @@
   }
   
   .header__options li{
-    padding: 0 5rem;
-    font-size: 3rem;
+    display: flex;
     align-self: center;
+    height: 100%;
+    flex-wrap: wrap;
   }
 
   .header__options li button{
@@ -30,11 +32,12 @@
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
-    font-size: 17px;
+    font-size: 2rem;
     background-color : transparent;
-    padding: 10px;
     outline: none;
     border: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .header__options li button:hover{

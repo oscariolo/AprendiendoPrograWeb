@@ -5,18 +5,27 @@ import { Product } from './Models/Product'
 import ProductController from './Controllers/ProductController'
 import { useEffect, useState } from 'react'
 
-/*temporal*/
-
+function LoadingContent() {
+  return (
+      <img src='/logo.png' className='loading-logo'></img>
+  );
+}
 
 function MainContent() {
   let productController = new ProductController()
 
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  
+
+
 
    useEffect(() => {
     ;(async () => {
-      const result = await productController.loadProducts()
-      setProducts(result)
+      const result = await productController.loadProducts();
+      setProducts(result);
+      setLoading(false);
     })()
    }, []);
 
@@ -29,8 +38,11 @@ function MainContent() {
           </aside>
           <section className='main__showcase'>
             {
-              products.map(p=><ProductCard key={p.id} product={p} imageRoute={p.img_route} ></ProductCard>)
+              loading ? (<LoadingContent></LoadingContent>): (
+                products.map(p=><ProductCard key={p.id} product={p} imageRoute={p.img_route} ></ProductCard>)
+              )
             }
+            
           </section>
         </main>
       </>
@@ -38,3 +50,4 @@ function MainContent() {
   
   }
 export default MainContent
+
