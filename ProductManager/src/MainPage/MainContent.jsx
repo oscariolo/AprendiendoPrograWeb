@@ -4,6 +4,7 @@ import './Styles/MainContent.css'
 import { Product } from './Models/Product'
 import ProductController from './Controllers/ProductController'
 import { useEffect, useState } from 'react'
+import { FoodTypes } from './Models/FoodTypes'
 
 function LoadingContent() {
   return (
@@ -16,10 +17,19 @@ function MainContent() {
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [pricelimit, setPriceLimit] = useState(20);
+  const [foodType,setFoodtype] = useState(FoodTypes.all);
   
+  function handleFilterItems(){
+    return products.filter(
+      (p)=>{
+        const priceConstraint = p.price <=pricelimit;
+        const typeConstraint = (foodType==FoodTypes.all) ? true: p.name.toUpperCase().includes(foodType)
+        return priceConstraint && typeConstraint
+      }
+    ).map(p=><ProductCard key={p.id} product={p} imageRoute={p.img_route} ></ProductCard>)
+  }
   
-
-
 
    useEffect(() => {
     ;(async () => {
@@ -34,20 +44,15 @@ function MainContent() {
         <main className='main'>
           <aside className='main__filter'>
             <h1 className='tag-title__filter'>Productos</h1>
-            <FilterSection></FilterSection>
+            <FilterSection onValueChanged={setPriceLimit} onFoodTypeChanged={setFoodtype}></FilterSection>
           </aside>
           <section className='main__showcase'>
             {
-              loading ? (<LoadingContent></LoadingContent>): (
-                products.map(p=><ProductCard key={p.id} product={p} imageRoute={p.img_route} ></ProductCard>)
-              )
-            }
-            
+              loading ? (<LoadingContent></LoadingContent>): handleFilterItems(products,pricelimit)
+            }        
           </section>
         </main>
       </>
     )
-  
-  }
+  } 
 export default MainContent
-
