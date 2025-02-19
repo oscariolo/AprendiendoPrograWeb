@@ -1,4 +1,5 @@
 import './App.css'
+import './Fonts/SeaweedScript-Regular.ttf'
 import Header from './MainPage/Header'
 import MainContent from './MainPage/MainContent';
 import Footer from './MainPage/Footer';

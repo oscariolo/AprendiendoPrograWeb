@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Kayana-demo";
+  src: local("Kayana-demo"),
+    url("./Fonts/Kayana-demo.otf") format("opentype");
+}
+
+
+
+
 /*GENERAL CSS FOR PAGE*/
 #root{
   --main-band-color:#A4550A;
@@ -16,7 +25,11 @@
 
 html{
 font-size: 62.5%;
-font-family: "Bebas Neue", serif;
+font-family: "Kayana-demo", serif;
+}
+
+button{
+  font-family: "Bebas Neue", serif;
 }
 
 body{
