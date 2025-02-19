@@ -9,14 +9,15 @@
   }
   /* The slider itself */
   .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;
     appearance: none;
     width: max-content; 
     height: 5%; 
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    opacity: 0.7; 
     transition: opacity .2s;
+    border-radius: 16px;
   }
   
   /* Mouse-over effects */
@@ -25,18 +26,35 @@
   }
   
   /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+  .slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
     appearance: none;
-    background: var(--main-band-color); /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    background: var(--main-band-color); 
+    cursor: pointer; 
+    width: 2.5rem;
+    height: 2.5rem;
+    border:none;
+    border-radius: 8px;
+    position: relative;
+    bottom: 2px;
   }
+
+  .slider::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer; 
+    height: 2rem;
+    border-radius: 8px;
+  } 
+
+
   
   .slider::-moz-range-thumb {
-    width: 2.5rem; /* Set a specific slider handle width */
-    height: 2.5rem; /* Slider handle height */
-    background: var(--main-band-color); /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 2.5rem; 
+    height: 2.5rem; 
+    background: var(--main-band-color); 
+    cursor: pointer; 
+    border: none;
   }
 
   .filters{

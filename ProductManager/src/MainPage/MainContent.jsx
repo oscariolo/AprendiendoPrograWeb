@@ -1,9 +1,8 @@
 import FilterSection from './Components/FiltersSection'
 import ProductCard from './Components/ProductCard'
 import './Styles/MainContent.css'
-import { Product } from './Models/Product'
 import ProductController from './Controllers/ProductController'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { FoodTypes } from './Models/FoodTypes'
 
 function LoadingContent() {
@@ -13,29 +12,16 @@ function LoadingContent() {
 }
 
 function MainContent() {
-  let productController = new ProductController()
+  const productController = useRef(new ProductController());
 
-  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [pricelimit, setPriceLimit] = useState(20);
   const [foodType,setFoodtype] = useState(FoodTypes.all);
-  
-  function handleFilterItems(){
-    return products.filter(
-      (p)=>{
-        const priceConstraint = p.price <=pricelimit;
-        const typeConstraint = (foodType==FoodTypes.all) ? true: p.name.toUpperCase().includes(foodType)
-        return priceConstraint && typeConstraint
-      }
-    ).map(p=><ProductCard key={p.id} product={p} imageRoute={p.img_route} ></ProductCard>)
-  }
-  
 
    useEffect(() => {
     ;(async () => {
-      const result = await productController.loadProducts();
-      setProducts(result);
-      setLoading(false);
+      await productController.current.loadProducts();
+      setLoading(false)
     })()
    }, []);
 
@@ -48,7 +34,7 @@ function MainContent() {
           </aside>
           <section className='main__showcase'>
             {
-              loading ? (<LoadingContent></LoadingContent>): handleFilterItems(products,pricelimit)
+              loading ? (<LoadingContent></LoadingContent>): productController.current.handleFilterItems(pricelimit,foodType).map(p=><ProductCard key={p.id} product={p} imageRoute={p.img_route} ></ProductCard>)
             }        
           </section>
         </main>
