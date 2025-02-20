@@ -9,8 +9,10 @@
 
 /*GENERAL CSS FOR PAGE*/
 #root{
-  --main-band-color:#A4550A;
-  --main-background-color:#f9ca9f;
+  --main-band-color:#8b4513;
+  --main-background-color:#D2B48C;
+  --main-footer-color:#DEB887;
+  --main-menu-color:#C19A6B;
   height: 100vh;
   display: flex;
   flex-direction: column;

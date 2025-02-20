@@ -24,7 +24,7 @@ function FiltersSection({onValueChanged, onFoodTypeChanged, maxValue=20}) {
                     <input type="range" min={1} max={20} value={sliderValue} className="slider" onChange={sliding}></input>
                     <p className='slidecontainer__count'>{sliderValue}</p>
                 </li>
-              </ul>
+            </ul>
         </>
     )
 }

@@ -2,6 +2,26 @@
 .footer{
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    height: 3%;
+    background-color: var(--main-footer-color);
+}
+
+.footer__direction{
+    font-size: large;
+    font-family: "Bebas Neue", serif;
+}
+
+.footer__icon{
+    font-size: large;
+    color: var(--main-band-color);
+}
+
+.footer p{
+    font-size: "Bebas Neue", serif;
+    font-size: 1.5rem;
+    color:white;
 }
   
   

@@ -5,8 +5,7 @@
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    background-color: #090909;
-    padding: 0.5rem;
+    background-color: #D2B48C;
 }
   
 .main__filter{
@@ -15,7 +14,8 @@
     justify-self: center;
     align-items: center;
     padding: 2rem;
-    color:white
+    color:white;
+    background-color: var(--main-menu-color);
 }
 
 .main__showcase{
@@ -24,8 +24,11 @@
     justify-content: center;
     flex-wrap: wrap;
     flex:1;
-    gap:1rem
+    gap:1rem;
+    padding: 1rem;
+        
 }
+
 
 .tag-title__filter{
     font-size: 3rem;

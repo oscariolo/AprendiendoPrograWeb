@@ -32,7 +32,7 @@
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
-    font-size: 2rem;
+    font-size: 3rem;
     background-color : transparent;
     outline: none;
     border: none;
@@ -51,9 +51,10 @@
   }
   
   .logo__image{
-    width: 10rem;
+    width: 7rem;
     height: 10rem;
     border-radius: 50%;
+    padding-left: 1.5rem;
   }
   
   .header__title{
